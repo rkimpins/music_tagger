@@ -12,5 +12,5 @@ shortcuts instead of commands
 view multiple files at a time, and run actions on multiple
 let user define certain actions
   remove perl expressions from files
-If picard has an API, use that
-Add tempo to a song (with a command)
+If musicBrainz picard has an API, use that
+Add tempo to a song (with a command, easy)
