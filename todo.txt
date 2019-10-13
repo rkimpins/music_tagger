@@ -1,0 +1,16 @@
+Basic tagging for all fields
+Converting filename based on tags
+Swap tag fields (swap artist and title)
+remove certain expressions liek [official audio[, (official video)
+save changes we make, and suggest them in the future
+  ex: recomend choices for artist based on previous editing
+scrap web for information
+  let us search for something, and use the results
+  even if it is just for reference
+  maybe top results of google or something, like when we know the name
+shortcuts instead of commands
+view multiple files at a time, and run actions on multiple
+let user define certain actions
+  remove perl expressions from files
+If picard has an API, use that
+Add tempo to a song (with a command)
