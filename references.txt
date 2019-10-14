@@ -1,0 +1,112 @@
+eyed3
+  tag
+    Usage
+      audiofile = eyed3.load(filename)
+      audiofile.tag.artist
+      >>>"artist name"
+      audiofile.tag.artist = "artist name"
+      audiofile.tag.save()
+    More options
+      tag.clear()
+      comments
+      bpm
+      play_count
+      publisher
+      cd_id
+      images
+      release_date
+      lyrics
+      disc_num
+      genre
+json
+  import json
+  jsonData = '{"name": "Frank", "age": 39}'
+  jsonToPython = json.loads(jsonData)
+
+  pythonDictionary = {'name':'Bob', 'age':44, 'isEmployed':True}
+  dictionaryToJson = json.dumps(pythonDictionary)
+  json.dump(object, file)
+  x = json.load(file)
+
+  x = dict() ...
+  file = open("file", "x")
+  json.dump(x, file)
+  file.close()
+  file = open("file", "r")
+  x = json.load(file)
+  file.close()
+file I/O
+  file = open("filename", "opt")
+      'r' reading
+      'w' writing (overwrite)
+      'x' create and write to new
+      'a' append
+      'r+' read write
+  file.read() "one\ntwo\n"
+  file.readline() "one\n", watch for overlap, only read this once
+  file.readlines() list of "one\n", "two\n"
+  file.write("testline") only work if we are in some sort of read mode
+  file.close() to see changes
+
+  with open("test.txt") as file:
+      x = file.readlines()
+      ...
+  file will be closed by this point, this i how we should do it
+  file.seek(offset, whence)
+  whence 0 from start, 1 from current post, 2 from end of file
+  seek(5) go to 6th bit of file
+Rename Multiple Files
+  https://www.geeksforgeeks.org/rename-multiple-files-using-python/
+  # importing os module
+  import os
+  # Function to rename multiple files
+  def main():
+      i = 0
+      for filename in os.listdir("xyz"):
+          dst ="Hostel" + str(i) + ".jpg"
+          src ='xyz'+ filename
+          dst ='xyz'+ dst
+
+          # rename() function will
+          # rename all the files
+          os.rename(src, dst)
+          i += 1
+  # Driver Code
+  if __name__ == '__main__':
+      # Calling main() function
+      main()
+docstrings
+  Generate HTML documentation
+    pydoc -w myproject
+  https://www.pythonforbeginners.com/basics/python-docstrings/
+  obj.__doc__
+  def my_function():
+    """ Do nothing,but document it.
+
+    More information about the function
+    """
+
+    pass
+
+  """
+  Assuming this is file mymodule.py, then this string, being the
+  first statement in the file, will become the "mymodule" module's
+  docstring when the file is imported.
+  """
+   
+  class MyClass(object):
+      """The class's docstring"""
+   
+      def my_method(self):
+          """The method's docstring"""
+   
+  def my_function():
+      """The function's docstring"""
+  Accessing Docstrings
+    module
+      import mymodule
+      help(mymodule)
+    object
+      myobj.__doc__
+    function
+      myfun.__doc__

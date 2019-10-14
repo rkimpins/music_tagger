@@ -14,3 +14,5 @@ let user define certain actions
   remove perl expressions from files
 If musicBrainz picard has an API, use that
 Add tempo to a song (with a command, easy)
+Easy delete a tag
+API to get lyrics for the song

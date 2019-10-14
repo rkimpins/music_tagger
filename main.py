@@ -26,6 +26,9 @@ def read_action(letter):
     func = switcher.get(letter)
     func()
 
+def print_tags(filename):
+    """GIven a filename, pretty prints all the relevent tags"""
+
 # Given a filename in our current directory, asks the user to manually update the tags
 def manual_tag(filename, coverage = "basic"):
     """Given a filename, manually updates each ID3 tag
@@ -64,7 +67,6 @@ def manual_tag(filename, coverage = "basic"):
                 pass
         audiofile.tag.track_num = track_num
     audiofile.tag.save()
-
     print("done")
 
 def main():
@@ -81,47 +83,6 @@ def main():
         print(filename)
         manual_tag(filename)
     '''
-    '''
-   import json
-    jsonData = '{"name": "Frank", "age": 39}'
-    jsonToPython = json.loads(jsonData) 
-
-    pythonDictionary = {'name':'Bob', 'age':44, 'isEmployed':True}
-    dictionaryToJson = json.dumps(pythonDictionary)
-    json.dump(object, file)
-    x = json.load(file)
-    
-    x = dict() ...
-    file = open("file", "x")
-    json.dump(x, file)
-    file.close()
-    file = open("file", "r")
-    x = json.load(file)
-    file.close()
-    
-    '''
-    ''' open files
-    file = open("name", "opt") 
-        'r' reading 
-        'w' writing (overwrite) 
-        'x' create and write to new 
-        'a' append 
-        'r+' read write
-    file.read() "one\ntwo\n"
-    file.readline() "one\n", watch for overlap, only read this once
-    file.readlines() list of "one\n", "two\n"
-    file.write("testline") only work if we are in some sort of read mode
-    file.close() to see changes
-    
-    with open("test.txt") as file:
-        x = file.readlines()
-        ...
-    file will be closed by this point, this i how we should do it
-    file.seek(offset, whence)
-    whence 0 from start, 1 from current post, 2 from end of file
-    seek(5) go to 6th bit of file
-    '''
-
 
 if __name__ == "__main__":
     main()
